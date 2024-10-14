@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  width: calc(100% - 2.5rem);
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+}
+
+.header button {
+  height: 3rem;
+  width: 3rem;
+  background: transparent;
+  border: 2px solid var(--color-elements);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.header button span {
+  display: block;
+  height: .75rem;
+  width: .75rem;
+  background: var(--color-elements);
+}

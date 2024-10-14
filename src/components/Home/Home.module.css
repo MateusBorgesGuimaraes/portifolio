@@ -1,0 +1,32 @@
+.container {
+  background-image: url('../../assets/images/hero-image2.png');
+  background-size: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.homeContainer {
+  position: relative;
+  height: calc(100% - 5.625rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.title {
+  font-size: 6rem;
+  font-family: 'DevilBreezeMedium';
+  font-weight: 600;
+}
+
+.description {
+  position: absolute;
+  width: 10rem;
+  bottom: 20px;
+  right: 20px;
+  text-align: start;
+  line-height: 1.25;
+}
