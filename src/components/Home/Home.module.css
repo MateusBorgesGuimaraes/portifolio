@@ -1,6 +1,6 @@
 .container {
-  background-image: url('../../assets/images/hero-image2.png');
-  background-size: fill;
+  background-image: url('../../assets/images/hero-image.png');
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
@@ -29,4 +29,45 @@
   right: 20px;
   text-align: start;
   line-height: 1.25;
+}
+
+@media (width < 75rem) {
+  .title {
+    font-size: 4rem;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+}
+
+@media (width < 65rem) {
+  .container {
+    background-size: cover;
+  }
+}
+
+@media (width < 52.5rem) {
+  .description {
+    display: none;
+  }
+}
+
+@media (width < 47.5rem) {
+  .title {
+    font-size: 3rem;
+  }
+}
+
+@media (width < 40rem) {
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (width < 23.75rem) {
+  .title {
+    padding-inline: 1.25rem;
+    word-break: break-all;
+  }
 }

@@ -67,15 +67,25 @@ table {
   --color-elements: #000;
 }
 
+body.dark {
+  --color-background: #000;
+  --color-elements: #fff;
+}
+
 a {
   text-decoration: none;
   color: var(--color-elements);
+  transition: color 0.3s ease;
 }
 
 body {
   font-family: "OpenSansSemibold";
   font-size: 1rem;
+  background-color: var(--color-background);
+  color: var(--color-elements);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 
 .container {
   margin: 2.5rem;
@@ -107,6 +117,10 @@ body {
   font-size: 1rem;
 }
 
+.buttons button span {
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
 .copyright {
   position: absolute;
   bottom: -24px; 
@@ -121,6 +135,7 @@ body {
 
 .button-ligth, .button-dark {
   background: none;
+  cursor: pointer;
   border: none;
   display: flex;
   gap: .25rem;
@@ -130,11 +145,84 @@ body {
   width: .875rem;
   height: .875rem;
   border: 1px solid var(--color-elements);
-
 }
+
+.button-ligth.active span, .button-dark.active span {
+  width: .875rem;
+  height: .875rem;
+  background: var(--color-elements);
+  border: 1px solid var(--color-elements);
+}
+
 body {
   background-color: var(--color-background);
   color: var(--color-elements);
+}
+
+@media (width < 52.5rem) {
+  .container {
+    height: calc(100dvh - 44px);
+    margin: 20px;
+  }
+
+  .linkdin {
+    position: absolute;
+    font-size: .875rem;
+    top: -20px;
+    left: 0;
+  }
+  
+  .buttons {
+    position: absolute;
+    font-size: .875rem;
+    display: flex;
+    top: 50%;
+    left: -12px;
+    transform: translate(-50%, -50%) rotate(-90deg); 
+  }
+  
+  .buttons button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-elements);
+    font-family: 'OpenSansBold';
+    font-size: .875rem;
+  }
+  
+  .copyright {
+    position: absolute;
+    bottom: -20px; 
+    font-size: .875rem;
+    left: 0; 
+  }
+  
+  .email {
+    position: absolute;
+    top: -20px; 
+    font-size: .875rem;
+    right: 0px; 
+  }
+  
+  .button-ligth, .button-dark {
+    background: none;
+    border: none;
+    display: flex;
+    gap: .25rem;
+  }
+  
+  .button-ligth span, .button-dark span {
+    width: .875rem;
+    height: .875rem;
+    border: 1px solid var(--color-elements);
+  
+  }
+}
+
+@media(width < 37.5rem) {
+  .email {
+    display: none;
+  }
 }
 
 /* @media (prefers-color-scheme: dark) {

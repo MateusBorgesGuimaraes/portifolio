@@ -7,7 +7,7 @@ const Home = () => {
       <Header />
       <section className={styles.homeContainer}>
         <h1 className={styles.title}>
-          Desenvolvedor Deb/ <br /> Web Designer
+          Desenvolvedor Web/ <br /> Web Designer
         </h1>
 
         <p className={styles.description}>
