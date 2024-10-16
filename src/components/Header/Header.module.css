@@ -1,4 +1,6 @@
 .header {
+  position: relative;
+  z-index: 999;
   display: flex;
   width: calc(100% - 2.5rem);
   justify-content: space-between;
@@ -6,7 +8,12 @@
   padding: 1.25rem;
 }
 
+.header a {
+  z-index: 999;
+}
+
 .header button {
+  z-index: 999;
   height: 3rem;
   width: 3rem;
   background: transparent;
@@ -23,6 +30,7 @@
   width: .75rem;
   background: var(--color-elements);
 }
+
 
 @media (width <  52.5rem) {
   .header > a > svg{

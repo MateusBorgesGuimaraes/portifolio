@@ -1,0 +1,100 @@
+.menuModal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100dvh - 5.25rem);
+  background-color: var(--color-background);
+  z-index: 1;
+}
+
+.containerModal {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  justify-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.containerList  {
+  grid-column: 2/4;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 6.5rem;
+  font-size: 4rem;
+  font-family: "DevilBreezeMedium";
+}
+
+.containerList li {
+  cursor: pointer;
+}
+
+.containerList li a {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.containerList li {
+  position: relative;
+}
+
+.containerList li a span {
+  display: block;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: var(--color-elements);
+}
+
+.containerList li::before {
+  content: '';
+  position: absolute;
+  top: -1.5rem;
+  right: 0;
+  font-family: "OpenSansSemibold";
+  font-size: 0.8rem;
+  color: var(--color-elements);
+  opacity: 0;
+  transform: translateX(100%); 
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  white-space: nowrap; 
+}
+
+.containerList li:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.containerList li:nth-child(1)::before {
+  content: 'inicio do portifolio'; 
+}
+
+.containerList li:nth-child(2)::before {
+  content: 'sobre mim';
+}
+
+.containerList li:nth-child(3)::before {
+  content: 'projetos realizados';
+}
+
+.containerList li:nth-child(4)::before {
+  content: 'fale comigo';
+}
+
+.containerList li::after {
+  content: '';
+  position: absolute;
+  top: 40%;
+  left: 0;
+  height: 0.5rem;
+  width: 0;
+  background-color: var(--color-elements);
+  transition: width 0.4s ease;
+  z-index: -1;
+}
+
+.containerList li:hover::after {
+  width: 50rem; 
+}

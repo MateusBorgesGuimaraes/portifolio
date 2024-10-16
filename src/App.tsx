@@ -4,6 +4,9 @@ import Home from './components/Home/Home';
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { useThemeStore } from './store/theme-store';
+import Sobre from './components/sobre/Sobre';
+import { Projetos } from './components/projetos/Projetos';
+import Contato from './components/contato/Contato';
 
 function App() {
   const [isDark, setIsDark] = React.useState(true);
@@ -64,6 +67,9 @@ function App() {
           <p className="email">mateusguimaraes717@gmail.com</p>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/sobre" element={<Sobre />} />
+            <Route path="/" element={<Projetos />} />
+            <Route path="/" element={<Contato />} />
           </Routes>
         </div>
       </BrowserRouter>
