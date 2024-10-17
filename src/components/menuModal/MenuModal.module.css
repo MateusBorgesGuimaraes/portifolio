@@ -1,14 +1,15 @@
 .menuModal {
   position: absolute;
+  overflow: hidden;
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(100dvh - 5.25rem);
+  height: calc(100vh - 5.25rem);
   background-color: var(--color-background);
   z-index: 1;
 }
 
-.containerModal {
+.containerModal { 
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   align-items: center;
@@ -97,4 +98,45 @@
 
 .containerList li:hover::after {
   width: 50rem; 
+}
+
+@media (width < 75rem) {
+  .containerList li:hover::after {
+    width: 30rem; 
+  }
+}
+
+@media (width < 52.5rem) {
+  .menuModal {
+    height: calc(100dvh - 2.75rem);
+  }
+  
+  .containerList li:hover::after {
+    width: 30rem; 
+  }
+}
+
+@media(width < 40rem) {
+  .containerList li:hover::after {
+    width: 100%; 
+  }
+  
+  .containerModal {
+    grid-template-columns: 1fr;
+  }
+  
+  .containerList  {
+    grid-column: 1;
+    gap: 4.5rem;
+    font-size: 2rem;
+  }
+
+  .containerList li a span {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .containerList li::after {
+    height: .25rem; 
+  }
 }

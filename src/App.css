@@ -67,6 +67,8 @@ table {
   --color-elements: #000;
 }
 
+
+
 body.dark {
   --color-background: #000;
   --color-elements: #fff;
