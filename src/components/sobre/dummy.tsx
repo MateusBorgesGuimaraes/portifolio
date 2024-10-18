@@ -20,25 +20,25 @@ const Sobre = () => {
     <section className={styles.container}>
       <Header />
       <div className={styles.containerSobre}>
-        <div className={styles.containerInfos}>
-          <div className={styles.containerImage}>
+        <div className={styles.containerSobreMim}>
+          <div className={styles.image}>
             <img src="/src/assets/images/image-test.jpg" alt="mateus" />
           </div>
           <div className={styles.containerText}>
-            <p>
+            <p className={styles.text}>
               Me chamo Mateus Borges e Guimarães, tenho 23 anos e estou
               concluindo o Bacharelado em Sistemas de Informação, tive o
               primeiro contato com a área em 2020, onde acabei me apaixonando
               por programação Web e Design.
             </p>
 
-            <p>
+            <p className={styles.text}>
               Tenho interesse em trabalhar com full stack na área de web,
               atualmente meu conhecimento se concentra mais na parte do front
               End.
             </p>
 
-            <p>
+            <p className={styles.text}>
               Sou uma pessoa muito dedicada, estou sempre disposto a aprender
               novas tecnologias e a enfrentar quaisquer desafios propostos, sou
               muito comunicativo quando a questão é aprender algo.
@@ -50,13 +50,13 @@ const Sobre = () => {
               do desenvolvimento dos sites.
             </p>
 
-            <p>
+            <p className={styles.text}>
               Ser uma pessoa curiosa, é o que me levou a aprender todas as
               etapas do desenvolvimento web, do design, ao front end e back end,
               de maneira que possa contribuir onde for necessário.
             </p>
 
-            <p>
+            <p className={styles.text}>
               Sempre que começo algo, tenha certeza que vou dar o meu máximo
               para terminar.
             </p>

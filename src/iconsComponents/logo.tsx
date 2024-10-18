@@ -1,8 +1,6 @@
-type LogoProps = {
-  theme: 'white' | 'black';
-};
+import { IconProps } from '../types';
 
-export const Logo = ({ theme = 'black' }: LogoProps) => {
+export const Logo = ({ theme = 'black' }: IconProps) => {
   return (
     <svg
       width="100"
